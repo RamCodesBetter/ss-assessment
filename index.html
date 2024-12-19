@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrs. Norton Social Studies Assessment</title>
+    <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Mrs. Norton Social Studies Assessment</h1>
+    <form id="assessmentForm">
+        <!-- Question 1 -->
+        <div class="question">
+            <h2><strong>GOAL 1:</strong> Describe issues/events using maps and charts from different time periods</h2>
+            <h3>Compare these two maps showing each state's southern-born black population and explain the story behind the two maps.</h3>
+            <img src="Xnip2024-12-17_08-54-21.jpg" width="100%">
+            <textarea name="q1" id="q1" placeholder="Write your answer here..."></textarea>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h2><strong>GOAL 2:</strong> Identify the bidirectional relationship between environment and human activity</h2>
+            <h3>Create a map below and explain in the box at least 3 ways in how the environment affects people and how people affect the environment</h3>
+            <script src="https://zwibbler.com/zwibbler-demo.js"></script>
+            <zwibbler>
+                <div z-canvas></div>
+            </zwibbler>
+
+            <textarea name="q2" id="q2" placeholder="Write your answer here..."></textarea>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>Example multiple choice</h3>
+            <div>
+                <label>
+                    <input type="radio" name="q3" value="10"> A
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="0"> B
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="0"> C
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="0"> D
+                </label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="button" onclick="submitAssessment()">Submit Assessment</button>
+    </form>
+
+    <!-- Results Section -->
+    <div id="results">
+        <h2>Results:</h2>
+        <div id="questionResults"></div>
+        <p><strong>Total Score: <span id="points">0</span>/<span id="totalPoints">0</span></strong></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

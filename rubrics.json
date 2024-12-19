@@ -1,0 +1,18 @@
+{
+    "q1": [
+        [20, "Explains clearly on how the southern-born black population migrated from the South to the North because of a issue or an event", 50],
+        [10, "Mentions the difference in the graph, but gives a slight explanation about the migration", 30],
+        [5, "Notices the red increase in the graph, but gives no explanation about the migration", 15],
+        [0, "No Answer", 0]
+    ],
+    "q2": [
+        [15, "Gives three examples on how the environment affects people and how people affect the environment", 50],
+        [10, "Gives two examples on how the environment affects people and how people affect the environment", 30],
+        [5, "Gives one example on how the environment affects people and how people affect the environment", 15],
+        [0, "No Answer", 0]
+    ],
+    "q3": [
+        [10, "Correct"],
+        [0, "Incorrect"]
+    ]
+}

@@ -1,8 +1,8 @@
 {
     "q1": [
         [20, "Explains clearly on how the southern-born black population migrated from the South to the North because of a issue or an event", 50],
-        [10, "Mentions the difference in the graph, but gives a slight explanation about the migration", 30],
-        [5, "Notices the red increase in the graph, but gives no explanation about the migration", 15],
+        [15, "Mentions the difference in the graph, but gives a slight explanation about the migration", 30],
+        [10, "Notices the red increase in the graph, but gives no explanation about the migration", 15],
         [0, "No Answer", 0]
     ],
     "q2": [
@@ -17,8 +17,20 @@
     ],
     "q4": [
         [20, "Includes four accurate examples, two historical and two present of cultural diffusion", 50],
-        [10, "Includes three or two accurate examples of cultural diffusion", 30],
-        [5, "Includes one accurate example of cultural diffusion", 15],
+        [15, "Includes three or two accurate examples of cultural diffusion", 30],
+        [10, "Includes one accurate example of cultural diffusion", 15],
+        [0, "No Answer", 0]
+    ],
+    "q5": [
+        [15, "Chooses two countries and properly explains how geography has made or shaped their relationship and their population diversity", 50],
+        [10, "Chooses two countries and properly explains how geography has made or shaped their relationship or their population diversity", 30],
+        [5, "Chooses two countries and briefly explains how geography has made or shaped their relationship or their population diversity", 15],
+        [0, "No Answer", 0]
+    ],
+    "q6": [
+        [20, "Creates an organized plan that considers the group's resources including food, water and materials that are to be used over a long period of time", 50],
+        [15, "Creates a slightly organized plan that considers the gorup's resources including food, water and materials that are to be used over a short period of time", 30],
+        [10, "Creates a basic plan that considers the gorup's resources including food, water and materials, but doesn't consider time", 15],
         [0, "No Answer", 0]
     ]
 }

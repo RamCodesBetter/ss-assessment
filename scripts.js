@@ -4,7 +4,9 @@ const questions = [
     { id: "q1", type: "longAnswer" },
     { id: "q2", type: "longAnswer" },
     { id: "q3", type: "multipleChoice" },
-    { id: "q4", type: "longAnswer"}
+    { id: "q4", type: "longAnswer"},
+    { id: "q5", type: "longAnswer"},
+    { id: "q6", type: "longAnswer"}
 ];
 
 // Fetch rubrics from JSON file

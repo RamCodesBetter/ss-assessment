@@ -1,5 +1,12 @@
 let rubrics = {};
 
+const questions = [
+    { id: "q1", type: "longAnswer" },
+    { id: "q2", type: "longAnswer" },
+    { id: "q3", type: "multipleChoice" },
+    { id: "q4", type: "longAnswer"}
+];
+
 // Fetch rubrics from JSON file
 fetch("rubrics.json")
     .then(response => {
@@ -74,26 +81,24 @@ function submitAssessment() {
     // Debug: Confirm rubrics are available
     console.log("Current Rubrics:", rubrics);
 
-    // Question 1
-    const q1Value = document.getElementById("q1").value || "";
-    const q1Points = longAnswer(q1Value, rubrics.q1 || []);
-    accumulatedPoints += q1Points;
-    totalPoints += Math.max(...(rubrics.q1 || []).map(r => r[0]));
-    questionResults.innerHTML += generateRubricHTML(1, rubrics.q1 || [], q1Points);
+    // Process each question dynamically
+    questions.forEach((question, index) => {
+        const questionNumber = index + 1;
+        let points = 0;
 
-    // Question 2
-    const q2Value = document.getElementById("q2").value || "";
-    const q2Points = longAnswer(q2Value, rubrics.q2 || []);
-    accumulatedPoints += q2Points;
-    totalPoints += Math.max(...(rubrics.q2 || []).map(r => r[0]));
-    questionResults.innerHTML += generateRubricHTML(2, rubrics.q2 || [], q2Points);
+        if (question.type === "longAnswer") {
+            const value = document.getElementById(question.id).value || "";
+            points = longAnswer(value, rubrics[question.id] || []);
+        } else if (question.type === "multipleChoice") {
+            // Automatically determine the selector based on the question ID
+            const value = document.querySelector(`input[name="${question.id}"]:checked`);
+            points = multipleChoice(value, rubrics[question.id] || []);
+        }
 
-    // Question 3 (Multiple Choice)
-    const q3Value = document.querySelector('input[name="q3"]:checked');
-    const q3Points = multipleChoice(q3Value, rubrics.q3 || []);
-    accumulatedPoints += q3Points;
-    totalPoints += Math.max(...(rubrics.q3 || []).map(r => r[0]));
-    questionResults.innerHTML += generateRubricHTML(3, rubrics.q3 || [], q3Points);
+        accumulatedPoints += points;
+        totalPoints += Math.max(...(rubrics[question.id] || []).map(r => r[0]));
+        questionResults.innerHTML += generateRubricHTML(questionNumber, rubrics[question.id] || [], points);
+    });
 
     // Update Total Score
     document.getElementById("points").innerText = accumulatedPoints;

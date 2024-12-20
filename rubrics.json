@@ -14,5 +14,11 @@
     "q3": [
         [10, "Correct"],
         [0, "Incorrect"]
+    ],
+    "q4": [
+        [20, "Includes four accurate examples, two historical and two present of cultural diffusion", 50],
+        [10, "Includes three or two accurate examples of cultural diffusion", 30],
+        [5, "Includes one accurate example of cultural diffusion", 15],
+        [0, "No Answer", 0]
     ]
 }
